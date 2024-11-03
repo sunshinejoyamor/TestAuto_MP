@@ -13,6 +13,7 @@ option = Options()
 option.add_argument("--disable-infobars")
 option.add_argument("--disable-notifications")
 option.add_argument("start-maximized")
+option.add_argument("--window-size=2560,1440")
 
 ### Function that adds items from the Home page
 def add_to_cart_from_items_on_landing(driver, product_index):
@@ -73,12 +74,10 @@ if __name__ == '__main__':
 
     time.sleep(5)
     
-    buttons = driver.find_elements(By.XPATH, '//span[@class="Button_labelVariants_button__ickenod"]')
+    button = driver.find_element(By.XPATH, '//span[@class="Button_labelVariants_button__ickenod" and text()="Checkout"]')
 
-    for button in buttons:
-        if button.text == 'Checkout':
-            button.click() 
-            break
+    button.click() 
+    
     
     checkout = driver.find_elements(By.XPATH, '//div[@role="cell"]/div[@class="_1fragemos _1fragemox _1fragemp7 _1fragemp2 _1fragem1y _1fragemlj dDm6x"]/p')
 
