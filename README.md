@@ -2,7 +2,7 @@
 
 Notes:
 - For this exercise, I used Selenium for automation framework and Python for scripting
-- Testing is done in 2560x1440 screen size with the browser opened on a maximized size. Any smaller screen resolution might cause the script to fail as elements may not be found accordingly
+- Testing is done in 2560x1440 window size with the browser opened on a maximized screen. For smaller window sizes, the script can fail as elements might not be found accordingly if they are not properly presented or visible on the view.
 
 Dependencies/Pre-requisites:
 1. Selenium library - Reference: https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
